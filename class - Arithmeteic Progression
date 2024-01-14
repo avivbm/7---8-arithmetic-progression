@@ -1,0 +1,61 @@
+package cs;
+
+public class ArithmeticProgression {
+	private int fm;
+	private int diff;
+	public ArithmeticProgression(int fm,int diff)
+	{
+		this.fm=fm;
+		this.diff=diff;
+	}
+	public void printGeneralSeries()
+	{
+		System.out.println("an = "+this.fm+" + "+this.diff+"*(n-1)");
+	}
+	public int memberCalculation(int n)
+	{
+		int an = this.fm+this.diff*(n-1);
+		return an;
+	}
+	public float calculateN(int an)
+	{
+		float n = (an - this.fm) / this.diff + 1;
+		if(n == (int)n)
+		{
+			return n;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	public int getFM()
+	{
+		return this.fm;
+	}
+	public int getDiff()
+	{
+		return this.diff;
+	}
+	public void setFM(int fm)
+	{
+		this.fm = fm;
+	}
+	public void setDiff(int diff)
+	{
+		this.diff = diff;
+	}
+	public ArithmeticProgression(ArithmeticProgression other)
+	{
+		this.fm = other.fm;
+		this.diff = other.diff;
+	}
+	public boolean equals(ArithmeticProgression other)
+	{
+		return (this.fm == other.fm && this.diff == other.diff);
+	}
+	public boolean smallDiff(ArithmeticProgression other)
+	{
+		return this.diff > other.diff;
+	}
+}
