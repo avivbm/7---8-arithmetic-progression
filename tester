@@ -1,0 +1,14 @@
+package cs;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		ArithmeticProgression ap = new ArithmeticProgression(5, 7);
+		ap.printGeneralSeries();
+		System.out.println(ap.memberCalculation(3));
+		System.out.println(ap.calculateN(26));
+		ArithmeticProgression nap = new ArithmeticProgression(5, 7);
+		System.out.println(ap.equals(nap));
+		System.out.println(ap.smallDiff(nap));
+	}
+}
